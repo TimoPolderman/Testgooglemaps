@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText nameEdit = (EditText) findViewById(R.id.nameEdit);
         final EditText emailEdit = (EditText) findViewById(R.id.emailEdit);
-        final EditText phoneEdit = (EditText) findViewById(R.id.phoneEdit);
+        final EditText subjectEdit = (EditText) findViewById(R.id.phoneEdit);
         final EditText questionEdit = (EditText) findViewById(R.id.questionEdit);
 
         Button sendButton = (Button) findViewById(R.id.sendButton);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
              String name = nameEdit.getText().toString();
              String email = emailEdit.getText().toString();
-             String phone = phoneEdit.getText().toString();
+             String subject = subjectEdit.getText().toString();
              String question = questionEdit.getText().toString();
                 if (TextUtils.isEmpty(name)){
                     nameEdit.setError("Enter a name");
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
                     emailEdit.setError("Invalid email adress");
                     return;
                 }
-                if (TextUtils.isEmpty(phone)){
-                    phoneEdit.setError("Enter a phone number");
-                    phoneEdit.requestFocus();
+                if (TextUtils.isEmpty(subject)){
+                    subjectEdit.setError("Enter a subject");
+                    subjectEdit.requestFocus();
                     return;
                 }
                 if (TextUtils.isEmpty(question)){
@@ -58,10 +58,10 @@ public class MainActivity extends AppCompatActivity {
 
                 
                 sendEmail.setType("plain/text");
-                sendEmail.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"timopolderman@gmail.com"});
-                sendEmail.putExtra(android.content.Intent.EXTRA_SUBJECT, phone);
+                sendEmail.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"studievoorlichting@hr.nl"});
+                sendEmail.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
                 sendEmail.putExtra(android.content.Intent.EXTRA_TEXT,
-                        "name:"+name+'\n'+"Email ID:"+email+'\n'+"Message:"+'\n'+question);
+                        "Name: "+name+'\n'+"Email ID: "+email+'\n'+"MainActivity: "+'\n'+question);
 
 
                 startActivity(Intent.createChooser(sendEmail, "Send mail..."));
