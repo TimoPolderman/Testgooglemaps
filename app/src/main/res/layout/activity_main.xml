@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFCDD2"
-    tools:context=".MainActivity">
+    android:background="#CC0033"
+    tools:context="com.example.testgooglemaps.MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -17,6 +17,7 @@
         android:layout_marginBottom="28dp"
         android:gravity="center_horizontal"
         android:text="Question form"
+        android:textColor="#FFFFFF"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/nameEdit"
         app:layout_constraintStart_toStartOf="@+id/nameEdit"
@@ -26,12 +27,12 @@
         android:id="@+id/nameEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginBottom="45dp"
         android:backgroundTint="@color/colorPrimaryDark"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/phoneEdit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +47,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="E-mail"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/questionEdit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,8 +60,9 @@
         android:layout_marginBottom="35dp"
         android:backgroundTint="@color/colorPrimaryDark"
         android:ems="10"
-        android:inputType="phone"
-        android:hint="Phone number"
+        android:inputType="text"
+        android:hint="Subject"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/emailEdit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,8 +80,10 @@
         android:fitsSystemWindows="true"
         android:hint="Type your question here"
         android:inputType="textMultiLine"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/sendButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEdit" />
 
@@ -86,13 +91,14 @@
         android:id="@+id/sendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#FFFFFF"
         android:elevation="4dp"
         android:text="SEND!"
+        android:textColor="#CC0033"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionEdit" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
